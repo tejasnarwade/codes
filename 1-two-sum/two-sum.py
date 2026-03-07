@@ -2,15 +2,12 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
         seen = {}
-        for a in range(n):
-            diff = target - nums[a]
-
+        for i in range(n):
+            diff = target - nums[i]
             if diff in seen:
-                return [seen[diff], a]
-
+                return [seen[diff], i]
             else:
-                seen[nums[a]] = a
-
+                seen[nums[i]] = i
         return []
 
 # optimal approach (Hashmmap or complement lookup)
