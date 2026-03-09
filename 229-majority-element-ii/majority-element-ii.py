@@ -11,7 +11,7 @@ class Solution:
         return result
         '''
 
-        #optimal approach
+        #better approach ( i can think of this still its O(n) and not 0(1) )
         freqdict = {}
         for x in nums:
             freqdict[x]=freqdict.get(x,0)+1
