@@ -8,9 +8,8 @@ class Solution:
         while l<r:  
             # until right index not equal to left index
             h = min(height[l],height[r]) #height will be minimum one between height[l] and height[r]
-            w = r - l     #distance between 2 pointers
-            area = h * w
-            max_water = max(max_water,area)
+            w = r - l     #width is distance between 2 pointers
+            max_water = max(max_water,h*w)
             # jr left value lesser ahe tr left as comapred to right such that we have to acccumulate maximum amount of water so need maximum height[left]
             if height[l]<height[r]:
                 l=l+1
